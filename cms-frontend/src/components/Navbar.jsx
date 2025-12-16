@@ -90,7 +90,7 @@ ${ isScrolled ? "bg-white/60  " : "bg-green-50 " }`}>
     <button
       onClick={() => setMenu(!menu)}
       className="min-[705px]:hidden p-2 ml-2 text-black rounded-md transition-colors duration-200 "
-      aria-label={menu ? "Fermer le menu" : "Ouvrir le menu"}
+      aria-label={menu ? "Close the menu" : "Open the menu"}
     >
       {menu ? <X className="w-7 h-7" /> : <Menu className="w-7 h-7" />}
     </button>
