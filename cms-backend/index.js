@@ -19,3 +19,11 @@ app.use("/api/billing", billingRoutes);
 app.listen(process.env.PORT, () => {
   console.log(`Server running on port ${process.env.PORT}`);
 });
+
+const PING_URL = "https://test-billing-zpdr.onrender.com";
+
+setInterval(() => {
+  fetch(PING_URL)
+    .then((res) => console.log("Ping successful"))
+    .catch((err) => console.error("Ping failed:", err));
+}, 600000);

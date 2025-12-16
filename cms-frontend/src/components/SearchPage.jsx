@@ -13,7 +13,7 @@ function SearchPage() {
     const navigate = useNavigate();
 
      useEffect(() => {
-    fetch("http://localhost:5000/api/billing")
+    fetch("https://test-billing-zpdr.onrender.com/api/billing")
       .then(res => res.json())
       .then(data => setRowData(data));
   }, []);
@@ -21,7 +21,7 @@ function SearchPage() {
 
    const deleteClient = async (id) => {
     try {
-      const response = await fetch(`http://localhost:5000/api/billing/${id}`, {
+      const response = await fetch(`https://test-billing-zpdr.onrender.com/api/billing/${id}`, {
         method: "DELETE",
       });
 

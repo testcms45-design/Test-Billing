@@ -15,7 +15,7 @@ const toggleDescription = (id) => {
 
 
   useEffect(() => {
-    fetch("http://localhost:5000/api/billing")
+    fetch("https://test-billing-zpdr.onrender.com/api/billing")
       .then(res => res.json())
       .then(data => setRowData(data));
   }, []);
@@ -23,7 +23,7 @@ const toggleDescription = (id) => {
 
   const deleteClient = async (id) => {
     try {
-      const response = await fetch(`http://localhost:5000/api/billing/${id}`, {
+      const response = await fetch(`https://test-billing-zpdr.onrender.com/api/billing/${id}`, {
         method: "DELETE",
       });
 
@@ -44,7 +44,7 @@ const toggleDescription = (id) => {
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4  h-auto" >
       {rowData.map((product,index)=>(
-         <div key={index} className={`bg-white mx-auto rounded-xl max-sm:w-[90%] w-80 xl:w-96 ${product.description.length > 220 && !expandedIds[product._id] ? 'pb-10' : ''} ${expandedIds[product._id] ? 'h-auto ' : !expandedIds[product._id] && product.description.length > 220 ? 'h-141' :'h-138'} shadow-sm`}>
+         <div key={index} className={`bg-white mx-auto rounded-xl max-sm:w-[90%] w-80 xl:w-96 ${product.description.length > 220 && !expandedIds[product._id] ? 'pb-10' : ''} ${expandedIds[product._id] ? 'h-auto ' : !expandedIds[product._id] && product.description.length > 220 ? 'h-128.5 md:h-141' :'h-125.5 md:h-138'} shadow-sm`}>
               
               <img
                 className=" bg-amber-50 h-50 lg:h-62.5 w-full object-cover rounded-t-xl"

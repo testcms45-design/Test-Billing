@@ -9,7 +9,7 @@ export default function BillingTable() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    fetch("http://localhost:5000/api/billing")
+    fetch("https://test-billing-zpdr.onrender.com/api/billing")
       .then((res) => res.json())
       .then((data) => setRowData(data));
   }, []);
@@ -17,7 +17,7 @@ export default function BillingTable() {
   const deleteClient = async (id) => {
     if (!window.confirm("Delete this billing record?")) return;
 
-    await fetch(`http://localhost:5000/api/billing/${id}`, {
+    await fetch(`https://test-billing-zpdr.onrender.com/api/billing/${id}`, {
       method: "DELETE",
     });
 
@@ -80,9 +80,9 @@ export default function BillingTable() {
   ];
 
   return (
-    <div className="w-full mt-34 md:mt-40">
+    <div className="w-full mt-34 sm:mt-40 ">
   {/* Header */}
-        <h1 className="text-3xl md:text-5xl mb-5  mx-5">Billings Table <span className="text-zinc-300 text-sm md:text-xl">at this moment</span></h1>
+        <h1 className="text-3xl sm:text-5xl mb-5  mx-5">Billings Table <span className="text-zinc-300 text-sm md:text-xl">at this moment</span></h1>
 
 
   {/* Grid container */}

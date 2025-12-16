@@ -10,7 +10,7 @@ import UpdateInfos from "./updateInfos/update";
 import SearchPage from "./components/SearchPage";
 import { useSelector } from "react-redux";
 import Footer from "./components/Footer";
-import BillingTable from "./components/BillingTable";
+import BillingTable from "./billingPage/page";
 import { ModuleRegistry } from "ag-grid-community";
 import { AllCommunityModule } from "ag-grid-community";
 

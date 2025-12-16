@@ -64,7 +64,7 @@ export default function AddClient() {
     formData.append("image", formDataState.imageFile); // 🔑 ONE image
 
     try {
-      const response = await fetch("http://localhost:5000/api/billing", {
+      const response = await fetch("https://test-billing-zpdr.onrender.com/api/billing", {
         method: "POST",
         body: formData,
       });

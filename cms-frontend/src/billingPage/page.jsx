@@ -1,13 +1,12 @@
 import BillingTable from "../components/BillingTable"
 
 function Billing() {
-  return (<>
-    <div className="bg-green-50  min-h-screen ">
+  return (
+    <div className=" bg-white ">
       <>
       <BillingTable /></>
     </div>
     
-    </>
   );
 }
 
