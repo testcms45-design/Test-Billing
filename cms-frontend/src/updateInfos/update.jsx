@@ -119,7 +119,7 @@ export default function UpdateInfos() {
       
 
       {/* FORM */}
-      <div className="bg-green-50 min-h-screen text-black py-10 mt-24 md:mt-30">
+      <div className="bg-green-50 min-h-screen text-black py-10 mt-24 sm:mt-30">
         <h1 className="text-3xl  text-center mb-10">
           Update Client Infos
         </h1>

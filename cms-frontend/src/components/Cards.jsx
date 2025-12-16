@@ -32,7 +32,9 @@ const toggleDescription = (id) => {
         alert(err.message || "Failed to find infos");
         return;
       }
-      navigate('/')
+       fetch("https://test-billing-zpdr.onrender.com/api/billing")
+      .then(res => res.json())
+      .then(data => setRowData(data));
     } catch (error) {
       console.error(error);
       alert("Something went wrong. Please try again.");
